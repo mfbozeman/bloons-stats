@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Cargo query - Blooncyclopedia, the Bloons wiki</title>
+<script>(function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )bloonswikimwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":true,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"95069391920424854ab2a7fe","wgCanonicalNamespace":"Special","wgCanonicalSpecialPageName":"CargoQuery","wgNamespaceNumber":-1,"wgPageName":"Special:CargoQuery","wgTitle":"CargoQuery","wgCurRevisionId":0,"wgRevisionId":0,"wgArticleId":0,"wgIsArticle":false,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Special:CargoQuery","wgRelevantArticleId":0,"wgTempUserName":null,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgCargoDefaultQueryLimit":100,"wgCargoMapClusteringMinimum":80,"wgCargoMonthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"simpleBatchUploadMaxFilesPerBatch":{"*":0,"autopatrolled":20,"patroller":20,"sysop":100,"bureaucrat":100},"wgCiteReferencePreviewsActive":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":false,"watchlist":false,"tagline":false},"wgPopupsFlags":0,"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":false,"wgEditSubmitButtonLabelPublish":false,"wgCheckUserClientHintsHeadersJsApi":["brands","architecture","bitness","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","oojs-ui-core.styles":"ready","oojs-ui.styles.indicators":"ready","mediawiki.widgets.styles":"ready","oojs-ui-core.icons":"ready","jquery.tablesorter.styles":"ready","skins.vector.styles.legacy":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.embedVideo.styles":"ready"};RLPAGEMODULES=["ext.cargo.main","ext.cargo.cargoquery","jquery.tablesorter","site","mediawiki.page.ready","skins.vector.legacy.js","ext.gadget.ExplainTooltips","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.embedVideo.overlay","ext.checkUser.clientHints","ext.popups"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/load.php?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cjquery.tablesorter.styles%7Cmediawiki.widgets.styles%7Coojs-ui-core.icons%2Cstyles%7Coojs-ui.styles.indicators%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector">
+<script async="" src="/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector">
+<meta name="generator" content="MediaWiki 1.45.3">
+<meta name="robots" content="noindex,nofollow,max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="viewport" content="width=1120">
+<link rel="search" type="application/opensearchdescription+xml" href="/rest.php/v1/search" title="Blooncyclopedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://www.bloonswiki.com/api.php?action=rsd">
+<link rel="canonical" href="https://www.bloonswiki.com/index.php?title=Special%3ACargoQuery&amp;tables=btd6_towers&amp;fields=btd6_towers.name%2C+btd6_towers.category%2C+btd6_towers.cost%2C+btd6_towers.image%2C+&amp;where=&amp;join_on=&amp;group_by=&amp;having=&amp;order_by%5B0%5D=&amp;order_by_options%5B0%5D=ASC&amp;limit=&amp;offset=&amp;format=table">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<link rel="alternate" type="application/atom+xml" title="Blooncyclopedia Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom">
+<meta property="og:title" content="Special:CargoQuery">
+<meta property="og:site_name" content="Blooncyclopedia">
+<meta property="og:url" content="https://www.bloonswiki.com/Special:CargoQuery">
+<meta property="article:modified_time" content="2026-08-05T15:52:58Z">
+<meta property="article:published_time" content="2026-08-05T15:52:58Z">
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Article","name":"Cargo query - Blooncyclopedia, the Bloons wiki","headline":"Cargo query - Blooncyclopedia, the Bloons wiki","mainEntityOfPage":"Cargo query","identifier":"https:\/\/www.bloonswiki.com\/Special:CargoQuery","url":"https:\/\/www.bloonswiki.com\/Special:CargoQuery","dateModified":"2026-08-05T15:52:58Z","datePublished":"2026-08-05T15:52:58Z","image":[],"author":{"@type":"Organization","name":"Blooncyclopedia","url":"https:\/\/www.bloonswiki.com","logo":[]},"publisher":{"@type":"Organization","name":"Blooncyclopedia","url":"https:\/\/www.bloonswiki.com","logo":[]},"potentialAction":{"@type":"SearchAction","target":"https:\/\/www.bloonswiki.com\/index.php?title=Special:Search&search={search_term}","query-input":"required name=search_term"}}</script>
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns--1 ns-special mw-special-CargoQuery page-Special_CargoQuery rootpage-Special_CargoQuery skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">Cargo query</h1>
+	<div id="bodyContent" class="vector-body">
+		
+		<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-spcontent"><p>Showing below up to <strong>27</strong> results in range #<strong>1</strong> to #<strong>27</strong>.
+</p><p><div class="mw-pager-navigation-bar">View (<span class="mw-prevlink">previous 50</span>  |  <span class="mw-nextlink">next 50</span>) (<a href="/index.php?title=Special:CargoQuery&amp;limit=20&amp;offset=0&amp;tables=btd6_towers&amp;fields=btd6_towers.name%2C+btd6_towers.category%2C+btd6_towers.cost%2C+btd6_towers.image%2C+&amp;where=&amp;join_on=&amp;order_by%5B0%5D=&amp;group_by=&amp;having=&amp;format=table&amp;order+by+options%5B0%5D=ASC" title="Show 20 results per page" class="mw-numlink">20</a> | <span class="mw-numlink">50</span> | <a href="/index.php?title=Special:CargoQuery&amp;limit=100&amp;offset=0&amp;tables=btd6_towers&amp;fields=btd6_towers.name%2C+btd6_towers.category%2C+btd6_towers.cost%2C+btd6_towers.image%2C+&amp;where=&amp;join_on=&amp;order_by%5B0%5D=&amp;group_by=&amp;having=&amp;format=table&amp;order+by+options%5B0%5D=ASC" title="Show 100 results per page" class="mw-numlink">100</a> | <a href="/index.php?title=Special:CargoQuery&amp;limit=250&amp;offset=0&amp;tables=btd6_towers&amp;fields=btd6_towers.name%2C+btd6_towers.category%2C+btd6_towers.cost%2C+btd6_towers.image%2C+&amp;where=&amp;join_on=&amp;order_by%5B0%5D=&amp;group_by=&amp;having=&amp;format=table&amp;order+by+options%5B0%5D=ASC" title="Show 250 results per page" class="mw-numlink">250</a> | <a href="/index.php?title=Special:CargoQuery&amp;limit=500&amp;offset=0&amp;tables=btd6_towers&amp;fields=btd6_towers.name%2C+btd6_towers.category%2C+btd6_towers.cost%2C+btd6_towers.image%2C+&amp;where=&amp;join_on=&amp;order_by%5B0%5D=&amp;group_by=&amp;having=&amp;format=table&amp;order+by+options%5B0%5D=ASC" title="Show 500 results per page" class="mw-numlink">500</a>)</div></p><table class="cargoTable noMerge sortable"><thead><tr><th class="field_name">name</th>
+<th class="field_category">category</th>
+<th class="field_cost">cost</th>
+<th class="field_image">image</th>
+</tr></thead>
+<tbody><tr>
+<td class="field_name">Alchemist</td>
+<td class="field_category">Magic</td>
+<td class="field_cost">550</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-Alchemist.png" class="mw-file-description"><img alt="" src="/images/thumb/2/27/BTD6_000-Alchemist.png/180px-BTD6_000-Alchemist.png" decoding="async" width="180" height="277" class="mw-file-element" srcset="/images/thumb/2/27/BTD6_000-Alchemist.png/270px-BTD6_000-Alchemist.png 1.5x, /images/thumb/2/27/BTD6_000-Alchemist.png/360px-BTD6_000-Alchemist.png 2x" data-file-width="579" data-file-height="890"></a><figcaption>BTD6 000-Alchemist.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Banana Farm</td>
+<td class="field_category">Support</td>
+<td class="field_cost">1,250</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-BananaFarm.png" class="mw-file-description"><img alt="" src="/images/thumb/a/ab/BTD6_000-BananaFarm.png/180px-BTD6_000-BananaFarm.png" decoding="async" width="180" height="224" class="mw-file-element" srcset="/images/thumb/a/ab/BTD6_000-BananaFarm.png/270px-BTD6_000-BananaFarm.png 1.5x, /images/thumb/a/ab/BTD6_000-BananaFarm.png/360px-BTD6_000-BananaFarm.png 2x" data-file-width="657" data-file-height="819"></a><figcaption>BTD6 000-BananaFarm.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Beast Handler</td>
+<td class="field_category">Support</td>
+<td class="field_cost">250</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-BeastHandler.png" class="mw-file-description"><img alt="" src="/images/thumb/8/80/BTD6_000-BeastHandler.png/180px-BTD6_000-BeastHandler.png" decoding="async" width="180" height="192" class="mw-file-element" srcset="/images/thumb/8/80/BTD6_000-BeastHandler.png/270px-BTD6_000-BeastHandler.png 1.5x, /images/thumb/8/80/BTD6_000-BeastHandler.png/360px-BTD6_000-BeastHandler.png 2x" data-file-width="860" data-file-height="919"></a><figcaption>BTD6 000-BeastHandler.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Bomb Shooter</td>
+<td class="field_category">Primary</td>
+<td class="field_cost">375</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-BombShooter.png" class="mw-file-description"><img alt="" src="/images/thumb/d/d9/BTD6_000-BombShooter.png/180px-BTD6_000-BombShooter.png" decoding="async" width="180" height="152" class="mw-file-element" srcset="/images/thumb/d/d9/BTD6_000-BombShooter.png/270px-BTD6_000-BombShooter.png 1.5x, /images/thumb/d/d9/BTD6_000-BombShooter.png/360px-BTD6_000-BombShooter.png 2x" data-file-width="789" data-file-height="666"></a><figcaption>BTD6 000-BombShooter.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Boomerang Monkey</td>
+<td class="field_category">Primary</td>
+<td class="field_cost">315</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-BoomerangMonkey.png" class="mw-file-description"><img alt="" src="/images/thumb/6/63/BTD6_000-BoomerangMonkey.png/180px-BTD6_000-BoomerangMonkey.png" decoding="async" width="180" height="147" class="mw-file-element" srcset="/images/thumb/6/63/BTD6_000-BoomerangMonkey.png/270px-BTD6_000-BoomerangMonkey.png 1.5x, /images/thumb/6/63/BTD6_000-BoomerangMonkey.png/360px-BTD6_000-BoomerangMonkey.png 2x" data-file-width="934" data-file-height="761"></a><figcaption>BTD6 000-BoomerangMonkey.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Dart Monkey</td>
+<td class="field_category">Primary</td>
+<td class="field_cost">200</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-DartMonkey.png" class="mw-file-description"><img alt="" src="/images/thumb/5/5a/BTD6_000-DartMonkey.png/180px-BTD6_000-DartMonkey.png" decoding="async" width="180" height="233" class="mw-file-element" srcset="/images/thumb/5/5a/BTD6_000-DartMonkey.png/270px-BTD6_000-DartMonkey.png 1.5x, /images/thumb/5/5a/BTD6_000-DartMonkey.png/360px-BTD6_000-DartMonkey.png 2x" data-file-width="678" data-file-height="876"></a><figcaption>BTD6 000-DartMonkey.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Dartling Gunner</td>
+<td class="field_category">Military</td>
+<td class="field_cost">850</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-DartlingGunner.png" class="mw-file-description"><img alt="" src="/images/thumb/4/4b/BTD6_000-DartlingGunner.png/180px-BTD6_000-DartlingGunner.png" decoding="async" width="180" height="183" class="mw-file-element" srcset="/images/thumb/4/4b/BTD6_000-DartlingGunner.png/270px-BTD6_000-DartlingGunner.png 1.5x, /images/thumb/4/4b/BTD6_000-DartlingGunner.png/360px-BTD6_000-DartlingGunner.png 2x" data-file-width="947" data-file-height="962"></a><figcaption>BTD6 000-DartlingGunner.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Desperado</td>
+<td class="field_category">Primary</td>
+<td class="field_cost">300</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-Desperado.png" class="mw-file-description"><img alt="" src="/images/thumb/d/d8/BTD6_000-Desperado.png/180px-BTD6_000-Desperado.png" decoding="async" width="180" height="254" class="mw-file-element" srcset="/images/thumb/d/d8/BTD6_000-Desperado.png/270px-BTD6_000-Desperado.png 1.5x, /images/thumb/d/d8/BTD6_000-Desperado.png/360px-BTD6_000-Desperado.png 2x" data-file-width="682" data-file-height="964"></a><figcaption>BTD6 000-Desperado.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Druid</td>
+<td class="field_category">Magic</td>
+<td class="field_cost">400</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-Druid.png" class="mw-file-description"><img alt="" src="/images/thumb/9/91/BTD6_000-Druid.png/180px-BTD6_000-Druid.png" decoding="async" width="180" height="242" class="mw-file-element" srcset="/images/thumb/9/91/BTD6_000-Druid.png/270px-BTD6_000-Druid.png 1.5x, /images/thumb/9/91/BTD6_000-Druid.png/360px-BTD6_000-Druid.png 2x" data-file-width="680" data-file-height="916"></a><figcaption>BTD6 000-Druid.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Engineer Monkey</td>
+<td class="field_category">Support</td>
+<td class="field_cost">350</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-EngineerMonkey.png" class="mw-file-description"><img alt="" src="/images/thumb/7/7f/BTD6_000-EngineerMonkey.png/180px-BTD6_000-EngineerMonkey.png" decoding="async" width="180" height="218" class="mw-file-element" srcset="/images/thumb/7/7f/BTD6_000-EngineerMonkey.png/270px-BTD6_000-EngineerMonkey.png 1.5x, /images/thumb/7/7f/BTD6_000-EngineerMonkey.png/360px-BTD6_000-EngineerMonkey.png 2x" data-file-width="829" data-file-height="1003"></a><figcaption>BTD6 000-EngineerMonkey.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Glue Gunner</td>
+<td class="field_category">Primary</td>
+<td class="field_cost">225</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-GlueGunner.png" class="mw-file-description"><img alt="" src="/images/thumb/5/5d/BTD6_000-GlueGunner.png/180px-BTD6_000-GlueGunner.png" decoding="async" width="180" height="184" class="mw-file-element" srcset="/images/thumb/5/5d/BTD6_000-GlueGunner.png/270px-BTD6_000-GlueGunner.png 1.5x, /images/thumb/5/5d/BTD6_000-GlueGunner.png/360px-BTD6_000-GlueGunner.png 2x" data-file-width="858" data-file-height="877"></a><figcaption>BTD6 000-GlueGunner.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Heli Pilot</td>
+<td class="field_category">Military</td>
+<td class="field_cost">1,500</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-HeliPilot.png" class="mw-file-description"><img alt="" src="/images/thumb/f/f3/BTD6_000-HeliPilot.png/180px-BTD6_000-HeliPilot.png" decoding="async" width="180" height="204" class="mw-file-element" srcset="/images/thumb/f/f3/BTD6_000-HeliPilot.png/270px-BTD6_000-HeliPilot.png 1.5x, /images/thumb/f/f3/BTD6_000-HeliPilot.png/360px-BTD6_000-HeliPilot.png 2x" data-file-width="794" data-file-height="898"></a><figcaption>BTD6 000-HeliPilot.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Ice Monkey</td>
+<td class="field_category">Primary</td>
+<td class="field_cost">400</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-IceMonkey.png" class="mw-file-description"><img alt="" src="/images/thumb/e/eb/BTD6_000-IceMonkey.png/180px-BTD6_000-IceMonkey.png" decoding="async" width="180" height="205" class="mw-file-element" srcset="/images/thumb/e/eb/BTD6_000-IceMonkey.png/270px-BTD6_000-IceMonkey.png 1.5x, /images/thumb/e/eb/BTD6_000-IceMonkey.png/360px-BTD6_000-IceMonkey.png 2x" data-file-width="853" data-file-height="972"></a><figcaption>BTD6 000-IceMonkey.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Mermonkey</td>
+<td class="field_category">Magic</td>
+<td class="field_cost">300</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-Mermonkey.png" class="mw-file-description"><img alt="" src="/images/thumb/1/15/BTD6_000-Mermonkey.png/180px-BTD6_000-Mermonkey.png" decoding="async" width="180" height="192" class="mw-file-element" srcset="/images/thumb/1/15/BTD6_000-Mermonkey.png/270px-BTD6_000-Mermonkey.png 1.5x, /images/thumb/1/15/BTD6_000-Mermonkey.png/360px-BTD6_000-Mermonkey.png 2x" data-file-width="905" data-file-height="965"></a><figcaption>BTD6 000-Mermonkey.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Monkey Academy</td>
+<td class="field_category">Support</td>
+<td class="field_cost"></td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_001-MonkeyAcademy.png" class="mw-file-description"><img alt="" src="/images/thumb/5/54/BTD6_001-MonkeyAcademy.png/180px-BTD6_001-MonkeyAcademy.png" decoding="async" width="180" height="216" class="mw-file-element" srcset="/images/thumb/5/54/BTD6_001-MonkeyAcademy.png/270px-BTD6_001-MonkeyAcademy.png 1.5x, /images/thumb/5/54/BTD6_001-MonkeyAcademy.png/360px-BTD6_001-MonkeyAcademy.png 2x" data-file-width="816" data-file-height="977"></a><figcaption>BTD6 001-MonkeyAcademy.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Monkey Ace</td>
+<td class="field_category">Military</td>
+<td class="field_cost">800</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-MonkeyAce.png" class="mw-file-description"><img alt="" src="/images/thumb/3/38/BTD6_000-MonkeyAce.png/180px-BTD6_000-MonkeyAce.png" decoding="async" width="180" height="174" class="mw-file-element" srcset="/images/thumb/3/38/BTD6_000-MonkeyAce.png/270px-BTD6_000-MonkeyAce.png 1.5x, /images/thumb/3/38/BTD6_000-MonkeyAce.png/360px-BTD6_000-MonkeyAce.png 2x" data-file-width="884" data-file-height="854"></a><figcaption>BTD6 000-MonkeyAce.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Monkey Buccaneer</td>
+<td class="field_category">Military</td>
+<td class="field_cost">400</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-MonkeyBuccaneer.png" class="mw-file-description"><img alt="" src="/images/thumb/7/7e/BTD6_000-MonkeyBuccaneer.png/180px-BTD6_000-MonkeyBuccaneer.png" decoding="async" width="180" height="243" class="mw-file-element" srcset="/images/thumb/7/7e/BTD6_000-MonkeyBuccaneer.png/270px-BTD6_000-MonkeyBuccaneer.png 1.5x, /images/thumb/7/7e/BTD6_000-MonkeyBuccaneer.png/360px-BTD6_000-MonkeyBuccaneer.png 2x" data-file-width="757" data-file-height="1024"></a><figcaption>BTD6 000-MonkeyBuccaneer.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Monkey Sub</td>
+<td class="field_category">Military</td>
+<td class="field_cost">325</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-MonkeySub.png" class="mw-file-description"><img alt="" src="/images/thumb/3/37/BTD6_000-MonkeySub.png/180px-BTD6_000-MonkeySub.png" decoding="async" width="180" height="193" class="mw-file-element" srcset="/images/thumb/3/37/BTD6_000-MonkeySub.png/270px-BTD6_000-MonkeySub.png 1.5x, /images/thumb/3/37/BTD6_000-MonkeySub.png/360px-BTD6_000-MonkeySub.png 2x" data-file-width="833" data-file-height="893"></a><figcaption>BTD6 000-MonkeySub.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Monkey Village</td>
+<td class="field_category">Support</td>
+<td class="field_cost">1,200</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-MonkeyVillage.png" class="mw-file-description"><img alt="" src="/images/thumb/7/70/BTD6_000-MonkeyVillage.png/180px-BTD6_000-MonkeyVillage.png" decoding="async" width="180" height="227" class="mw-file-element" srcset="/images/thumb/7/70/BTD6_000-MonkeyVillage.png/270px-BTD6_000-MonkeyVillage.png 1.5x, /images/thumb/7/70/BTD6_000-MonkeyVillage.png/360px-BTD6_000-MonkeyVillage.png 2x" data-file-width="720" data-file-height="907"></a><figcaption>BTD6 000-MonkeyVillage.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Mortar Monkey</td>
+<td class="field_category">Military</td>
+<td class="field_cost">600</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-MortarMonkey.png" class="mw-file-description"><img alt="" src="/images/thumb/c/c4/BTD6_000-MortarMonkey.png/180px-BTD6_000-MortarMonkey.png" decoding="async" width="180" height="172" class="mw-file-element" srcset="/images/thumb/c/c4/BTD6_000-MortarMonkey.png/270px-BTD6_000-MortarMonkey.png 1.5x, /images/thumb/c/c4/BTD6_000-MortarMonkey.png/360px-BTD6_000-MortarMonkey.png 2x" data-file-width="936" data-file-height="894"></a><figcaption>BTD6 000-MortarMonkey.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Ninja Monkey</td>
+<td class="field_category">Magic</td>
+<td class="field_cost">400</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-NinjaMonkey.png" class="mw-file-description"><img alt="" src="/images/thumb/5/56/BTD6_000-NinjaMonkey.png/180px-BTD6_000-NinjaMonkey.png" decoding="async" width="180" height="166" class="mw-file-element" srcset="/images/thumb/5/56/BTD6_000-NinjaMonkey.png/270px-BTD6_000-NinjaMonkey.png 1.5x, /images/thumb/5/56/BTD6_000-NinjaMonkey.png/360px-BTD6_000-NinjaMonkey.png 2x" data-file-width="871" data-file-height="802"></a><figcaption>BTD6 000-NinjaMonkey.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Skywarden</td>
+<td class="field_category">Magic</td>
+<td class="field_cost">205</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-SkyWarden.png" class="mw-file-description"><img alt="" src="/images/thumb/a/a7/BTD6_000-SkyWarden.png/180px-BTD6_000-SkyWarden.png" decoding="async" width="180" height="168" class="mw-file-element" srcset="/images/thumb/a/a7/BTD6_000-SkyWarden.png/270px-BTD6_000-SkyWarden.png 1.5x, /images/thumb/a/a7/BTD6_000-SkyWarden.png/360px-BTD6_000-SkyWarden.png 2x" data-file-width="1024" data-file-height="953"></a><figcaption>BTD6 000-SkyWarden.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Sniper Monkey</td>
+<td class="field_category">Military</td>
+<td class="field_cost">350</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-SniperMonkey.png" class="mw-file-description"><img alt="" src="/images/thumb/e/e0/BTD6_000-SniperMonkey.png/180px-BTD6_000-SniperMonkey.png" decoding="async" width="180" height="253" class="mw-file-element" srcset="/images/thumb/e/e0/BTD6_000-SniperMonkey.png/270px-BTD6_000-SniperMonkey.png 1.5x, /images/thumb/e/e0/BTD6_000-SniperMonkey.png/360px-BTD6_000-SniperMonkey.png 2x" data-file-width="669" data-file-height="940"></a><figcaption>BTD6 000-SniperMonkey.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Spike Factory</td>
+<td class="field_category">Support</td>
+<td class="field_cost">1,000</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-SpikeFactory.png" class="mw-file-description"><img alt="" src="/images/thumb/2/28/BTD6_000-SpikeFactory.png/180px-BTD6_000-SpikeFactory.png" decoding="async" width="180" height="155" class="mw-file-element" srcset="/images/thumb/2/28/BTD6_000-SpikeFactory.png/270px-BTD6_000-SpikeFactory.png 1.5x, /images/thumb/2/28/BTD6_000-SpikeFactory.png/360px-BTD6_000-SpikeFactory.png 2x" data-file-width="883" data-file-height="762"></a><figcaption>BTD6 000-SpikeFactory.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Super Monkey</td>
+<td class="field_category">Magic</td>
+<td class="field_cost">2,500</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-SuperMonkey.png" class="mw-file-description"><img alt="" src="/images/thumb/5/5e/BTD6_000-SuperMonkey.png/180px-BTD6_000-SuperMonkey.png" decoding="async" width="180" height="198" class="mw-file-element" srcset="/images/thumb/5/5e/BTD6_000-SuperMonkey.png/270px-BTD6_000-SuperMonkey.png 1.5x, /images/thumb/5/5e/BTD6_000-SuperMonkey.png/360px-BTD6_000-SuperMonkey.png 2x" data-file-width="787" data-file-height="864"></a><figcaption>BTD6 000-SuperMonkey.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Tack Shooter</td>
+<td class="field_category">Primary</td>
+<td class="field_cost">260</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-TackShooter.png" class="mw-file-description"><img alt="" src="/images/thumb/0/06/BTD6_000-TackShooter.png/180px-BTD6_000-TackShooter.png" decoding="async" width="180" height="194" class="mw-file-element" srcset="/images/thumb/0/06/BTD6_000-TackShooter.png/270px-BTD6_000-TackShooter.png 1.5x, /images/thumb/0/06/BTD6_000-TackShooter.png/360px-BTD6_000-TackShooter.png 2x" data-file-width="732" data-file-height="788"></a><figcaption>BTD6 000-TackShooter.png</figcaption></figure></td>
+</tr>
+<tr>
+<td class="field_name">Wizard Monkey</td>
+<td class="field_category">Magic</td>
+<td class="field_cost">250</td>
+<td class="field_image"><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/File:BTD6_000-Wizard.png" class="mw-file-description"><img alt="" src="/images/thumb/f/fb/BTD6_000-Wizard.png/180px-BTD6_000-Wizard.png" decoding="async" width="180" height="287" class="mw-file-element" srcset="/images/thumb/f/fb/BTD6_000-Wizard.png/270px-BTD6_000-Wizard.png 1.5x, /images/thumb/f/fb/BTD6_000-Wizard.png/360px-BTD6_000-Wizard.png 2x" data-file-width="632" data-file-height="1007"></a><figcaption>BTD6 000-Wizard.png</figcaption></figure></td>
+</tr>
+</tbody></table><p><div class="mw-pager-navigation-bar">View (<span class="mw-prevlink">previous 50</span>  |  <span class="mw-nextlink">next 50</span>) (<a href="/index.php?title=Special:CargoQuery&amp;limit=20&amp;offset=0&amp;tables=btd6_towers&amp;fields=btd6_towers.name%2C+btd6_towers.category%2C+btd6_towers.cost%2C+btd6_towers.image%2C+&amp;where=&amp;join_on=&amp;order_by%5B0%5D=&amp;group_by=&amp;having=&amp;format=table&amp;order+by+options%5B0%5D=ASC" title="Show 20 results per page" class="mw-numlink">20</a> | <span class="mw-numlink">50</span> | <a href="/index.php?title=Special:CargoQuery&amp;limit=100&amp;offset=0&amp;tables=btd6_towers&amp;fields=btd6_towers.name%2C+btd6_towers.category%2C+btd6_towers.cost%2C+btd6_towers.image%2C+&amp;where=&amp;join_on=&amp;order_by%5B0%5D=&amp;group_by=&amp;having=&amp;format=table&amp;order+by+options%5B0%5D=ASC" title="Show 100 results per page" class="mw-numlink">100</a> | <a href="/index.php?title=Special:CargoQuery&amp;limit=250&amp;offset=0&amp;tables=btd6_towers&amp;fields=btd6_towers.name%2C+btd6_towers.category%2C+btd6_towers.cost%2C+btd6_towers.image%2C+&amp;where=&amp;join_on=&amp;order_by%5B0%5D=&amp;group_by=&amp;having=&amp;format=table&amp;order+by+options%5B0%5D=ASC" title="Show 250 results per page" class="mw-numlink">250</a> | <a href="/index.php?title=Special:CargoQuery&amp;limit=500&amp;offset=0&amp;tables=btd6_towers&amp;fields=btd6_towers.name%2C+btd6_towers.category%2C+btd6_towers.cost%2C+btd6_towers.image%2C+&amp;where=&amp;join_on=&amp;order_by%5B0%5D=&amp;group_by=&amp;having=&amp;format=table&amp;order+by+options%5B0%5D=ASC" title="Show 500 results per page" class="mw-numlink">500</a>)</div></p></div><div style="max-width: 70em;">
+<span style="width: 100%;" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-indicatorElement oo-ui-labelElement oo-ui-buttonWidget">
+<a href="#" class="specialCargoQuery-extraPane-toggle oo-ui-buttonElement-button" role="button" tabindex="0" aria-disabled="false" rel="nofollow">
+Modify query
+<span class="oo-ui-indicatorElement-indicator oo-ui-indicator-down"></span>
+</a>
+</span>
+<div class="specialCargoQuery-extraPane">
+<form id="queryform">
+<input type="hidden" value="Special:CargoQuery" name="title">
+<table class="cargoQueryTable" id="cargoQueryTable" >
+<tbody><tr class="ext-cargo-tr-tables">
+	<td class="mw-label"><label for="tables">Table(s):</label></td>
+	<td><div class='ext-cargo-tables oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-textInputWidget oo-ui-textInputWidget-type-text oo-ui-textInputWidget-php'><input type='text' tabindex='0' value='btd6_towers' class='oo-ui-inputWidget-input' /><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon'></span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator'></span></div></td></tr>
+<tr class="ext-cargo-tr-fields">
+	<td class="mw-label"><label for="fields">Field(s):</label></td>
+	<td><div class='ext-cargo-fields oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-textInputWidget oo-ui-textInputWidget-type-text oo-ui-textInputWidget-php'><input type='text' tabindex='0' value='btd6_towers.name, btd6_towers.category, btd6_towers.cost, btd6_towers.image, ' class='oo-ui-inputWidget-input' /><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon'></span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator'></span></div></td></tr>
+<tr class="ext-cargo-tr-where">
+	<td class="mw-label"><label for="where">Where:</label></td>
+	<td><div class='ext-cargo-where oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-textInputWidget oo-ui-textInputWidget-type-text oo-ui-textInputWidget-php'><textarea tabindex='0' class='oo-ui-inputWidget-input'></textarea><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon'></span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator'></span></div></td>
+</tr>
+<tr class="ext-cargo-tr-join_on">
+	<td class="mw-label"><label for="join_on">Join on:</label></td>
+	<td><div class='ext-cargo-join_on oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-textInputWidget oo-ui-textInputWidget-type-text oo-ui-textInputWidget-php'><textarea tabindex='0' class='oo-ui-inputWidget-input'></textarea><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon'></span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator'></span></div></td>
+</tr>
+<tr class="ext-cargo-tr-group_by">
+	<td class="mw-label"><label for="group_by">Group by:</label></td>
+	<td><div class='ext-cargo-group_by oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-textInputWidget oo-ui-textInputWidget-type-text oo-ui-textInputWidget-php'><input type='text' tabindex='0' value='' class='oo-ui-inputWidget-input' /><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon'></span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator'></span></div></td></tr>
+<tr class="ext-cargo-tr-having">
+	<td class="mw-label"><label for="having">Having:</label></td>
+	<td><div class='ext-cargo-having oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-textInputWidget oo-ui-textInputWidget-type-text oo-ui-textInputWidget-php'><textarea tabindex='0' class='oo-ui-inputWidget-input'></textarea><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon'></span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator'></span></div></td>
+</tr>
+
+<tr class="orderByRow" data-order-by-num=0><td class="mw-label"><label for="order_by">Order by:</td><td><div class='oo-ui-layout oo-ui-horizontalLayout'><div id='order_by[0]' class='oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-textInputWidget oo-ui-textInputWidget-type-text oo-ui-textInputWidget-php'><input type='text' tabindex='0' value='' class='oo-ui-inputWidget-input' /><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon'></span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator'></span></div><div id='order_by_options[0]' class='oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-dropdownInputWidget oo-ui-dropdownInputWidget-php'><select tabindex='0' name='order_by_options[0]' class='oo-ui-inputWidget-input'><option value='ASC' selected='selected'>ASC</option><option value='DESC'>DESC</option></select><span class='oo-ui-widget oo-ui-widget-enabled oo-ui-indicatorElement-indicator oo-ui-indicator-down oo-ui-indicatorElement oo-ui-labelElement-invisible oo-ui-indicatorWidget'></span></div><span id='addButton' class='oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-buttonWidget'><a role='button' tabindex='0' rel='nofollow' class='oo-ui-buttonElement-button'><span class='oo-ui-iconElement-icon oo-ui-icon-add'></span><span class='oo-ui-labelElement-label'></span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator'></span></a></span></div><tr class="ext-cargo-tr-limit">
+	<td class="mw-label"><label for="limit">Limit:</label></td>
+	<td><div class='ext-cargo-limit oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-textInputWidget oo-ui-textInputWidget-type-text oo-ui-textInputWidget-php'><input type='text' tabindex='0' value='' class='oo-ui-inputWidget-input' /><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon'></span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator'></span></div></td></tr>
+<tr class="ext-cargo-tr-offset">
+	<td class="mw-label"><label for="offset">Offset:</label></td>
+	<td><div class='ext-cargo-offset oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-textInputWidget oo-ui-textInputWidget-type-text oo-ui-textInputWidget-php'><input type='text' tabindex='0' value='' class='oo-ui-inputWidget-input' /><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon'></span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator'></span></div></td></tr>
+<tr class="ext-cargo-tr-format">
+<td class="mw-label">
+<label for="format">Format:
+</td>
+<td><div id='format' class='oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-dropdownInputWidget oo-ui-dropdownInputWidget-php'><select tabindex='0' name='format' class='oo-ui-inputWidget-input'><option value=''>(Default)</option><option value='list'>list</option><option value='ul'>ul</option><option value='ol'>ol</option><option value='template'>template</option><option value='embedded'>embedded</option><option value='csv'>csv</option><option value='excel'>excel</option><option value='feed'>feed</option><option value='json'>json</option><option value='outline'>outline</option><option value='tree'>tree</option><option value='table' selected='selected'>table</option><option value='dynamic table'>dynamic table</option><option value='map'>map</option><option value='googlemaps'>googlemaps</option><option value='leaflet'>leaflet</option><option value='openlayers'>openlayers</option><option value='calendar'>calendar</option><option value='icalendar'>icalendar</option><option value='timeline'>timeline</option><option value='gantt'>gantt</option><option value='bpmn'>bpmn</option><option value='category'>category</option><option value='bar chart'>bar chart</option><option value='pie chart'>pie chart</option><option value='gallery'>gallery</option><option value='slideshow'>slideshow</option><option value='tag cloud'>tag cloud</option><option value='exhibit'>exhibit</option><option value='bibtex'>bibtex</option><option value='zip'>zip</option></select><span class='oo-ui-widget oo-ui-widget-enabled oo-ui-indicatorElement-indicator oo-ui-indicator-down oo-ui-indicatorElement oo-ui-labelElement-invisible oo-ui-indicatorWidget'></span></div>
+
+</select>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<span class='oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-labelElement oo-ui-flaggedElement-primary oo-ui-flaggedElement-progressive oo-ui-buttonInputWidget'><button type='submit' tabindex='0' value='' class='oo-ui-inputWidget-input oo-ui-buttonElement-button'><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon oo-ui-image-invert'></span><span class='oo-ui-labelElement-label'>Submit</span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator oo-ui-image-invert'></span></button></span>
+</form>
+
+</div>
+</div>
+<div style="max-width: 70em;">
+<span style="width: 100%;" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-indicatorElement oo-ui-labelElement oo-ui-buttonWidget">
+<a href="#" class="specialCargoQuery-extraPane-toggle oo-ui-buttonElement-button" role="button" tabindex="0" aria-disabled="false" rel="nofollow">
+View wikitext
+<span class="oo-ui-indicatorElement-indicator oo-ui-indicator-down"></span>
+</a>
+</span>
+<div class="specialCargoQuery-extraPane">
+<pre>{{#cargo_query:
+tables=btd6_towers
+|fields=btd6_towers.name, btd6_towers.category, btd6_towers.cost, btd6_towers.image
+|format=table
+}}</pre>
+</div>
+</div>
+
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://www.bloonswiki.com/Special:CargoQuery">https://www.bloonswiki.com/Special:CargoQuery</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="mw-list-item"><a href="/index.php?title=Special:CreateAccount&amp;returnto=Special%3ACargoQuery&amp;returntoquery=tables%3Dbtd6_towers%26fields%3Dbtd6_towers.name%252C%2Bbtd6_towers.category%252C%2Bbtd6_towers.cost%252C%2Bbtd6_towers.image%252C%2B%26where%3D%26join_on%3D%26group_by%3D%26having%3D%26order_by%255B0%255D%3D%26order_by_options%255B0%255D%3DASC%26limit%3D%26offset%3D%26format%3Dtable" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="/index.php?title=Special:UserLogin&amp;returnto=Special%3ACargoQuery&amp;returntoquery=tables%3Dbtd6_towers%26fields%3Dbtd6_towers.name%252C%2Bbtd6_towers.category%252C%2Bbtd6_towers.cost%252C%2Bbtd6_towers.image%252C%2B%26where%3D%26join_on%3D%26group_by%3D%26having%3D%26order_by%255B0%255D%3D%26order_by_options%255B0%255D%3DASC%26limit%3D%26offset%3D%26format%3Dtable" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-special" class="selected mw-list-item"><a href="/index.php?title=Special%3ACargoQuery&amp;tables=btd6_towers&amp;fields=btd6_towers.name%2C+btd6_towers.category%2C+btd6_towers.cost%2C+btd6_towers.image%2C+&amp;where=&amp;join_on=&amp;group_by=&amp;having=&amp;order_by%5B0%5D=&amp;order_by_options%5B0%5D=ASC&amp;limit=&amp;offset=&amp;format=table" title="This is a special page, and it cannot be edited"><span>Special page</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	>
+	<label
+		id="p-variants-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views emptyPortlet vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3 >Search</h3>
+	<form action="/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch"
+			class="vector-search-box-inner"
+			 data-search-loc="header-navigation">
+			<input class="vector-search-box-input"
+				 type="search" name="search" placeholder="Search Blooncyclopedia" aria-label="Search Blooncyclopedia" autocapitalize="sentences" spellcheck="false" title="Search Blooncyclopedia [f]" accesskey="f" id="searchInput"
+			>
+			<input type="hidden" name="title" value="Special:Search">
+			<input id="mw-searchButton"
+				 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+			<input id="searchButton"
+				 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="/"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-Blooncyclopedia" class="mw-portlet mw-portlet-Blooncyclopedia vector-menu-portal portal vector-menu" aria-labelledby="p-Blooncyclopedia-label"  >
+	<h3
+		id="p-Blooncyclopedia-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Blooncyclopedia</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-About" class="mw-list-item"><a href="/Blooncyclopedia:About"><span>About</span></a></li><li id="n-How-to-help" class="mw-list-item"><a href="/Blooncyclopedia:How_to_help"><span>How to help</span></a></li><li id="n-FAQ" class="mw-list-item"><a href="/Help:FAQ"><span>FAQ</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-Sandbox" class="mw-list-item"><a href="/Blooncyclopedia:Sandbox"><span>Sandbox</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Community" class="mw-portlet mw-portlet-Community vector-menu-portal portal vector-menu" aria-labelledby="p-Community-label"  >
+	<h3
+		id="p-Community-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Community</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-Forums" class="mw-list-item"><a href="/Forum:Index"><span>Forums</span></a></li><li id="n-Discord-server" class="mw-list-item"><a href="https://discord.com/invite/wtq9Uwxm8W"><span>Discord server</span></a></li><li id="n-Support-us!" class="mw-list-item"><a href="/Blooncyclopedia:Support_us"><span>Support us!</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+<nav id="p-Browse" class="mw-portlet mw-portlet-Browse vector-menu-portal portal vector-menu" aria-labelledby="p-Browse-label"  >
+	<h3
+		id="p-Browse-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Browse</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-randompage" class="mw-list-item"><a href="/Special:RandomRootpage" title="Load a random page [x]" accesskey="x"><span>Random article</span></a></li><li id="n-Monkeys" class="mw-list-item"><a href="/Category:Monkeys"><span>Monkeys</span></a></li><li id="n-Bloons" class="mw-list-item"><a href="/Category:Bloons"><span>Bloons</span></a></li><li id="n-Modes" class="mw-list-item"><a href="/Category:Modes"><span>Modes</span></a></li><li id="n-Events" class="mw-list-item"><a href="/Category:Events"><span>Events</span></a></li><li id="n-Social-features" class="mw-list-item"><a href="/Category:Social_features"><span>Social features</span></a></li><li id="n-Cosmetic-features" class="mw-list-item"><a href="/Category:Cosmetic_features"><span>Cosmetic features</span></a></li><li id="n-Strategies" class="mw-list-item"><a href="/Category:Strategies"><span>Strategies</span></a></li><li id="n-Game-updates" class="mw-list-item"><a href="/Category:Updates"><span>Game updates</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+<nav id="p-Games" class="mw-portlet mw-portlet-Games vector-menu-portal portal vector-menu" aria-labelledby="p-Games-label"  >
+	<h3
+		id="p-Games-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Games</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-All-games" class="mw-list-item"><a href="/Category:Games"><span>All games</span></a></li><li id="n-Bloons-TD-6" class="mw-list-item"><a href="/Bloons_TD_6"><span>Bloons TD 6</span></a></li><li id="n-Bloons-TD-5" class="mw-list-item"><a href="/Bloons_TD_5"><span>Bloons TD 5</span></a></li><li id="n-Bloons-TD-4" class="mw-list-item"><a href="/Bloons_TD_4"><span>Bloons TD 4</span></a></li><li id="n-Bloons-TD-Battles-2" class="mw-list-item"><a href="/Bloons_TD_Battles_2"><span>Bloons TD Battles 2</span></a></li><li id="n-Bloons-TD-Battles" class="mw-list-item"><a href="/Bloons_TD_Battles"><span>Bloons TD Battles</span></a></li><li id="n-Bloons-Adventure-Time-TD" class="mw-list-item"><a href="/Bloons_Adventure_Time_TD"><span>Bloons Adventure Time TD</span></a></li><li id="n-Bloons-Monkey-City" class="mw-list-item"><a href="/Bloons_Monkey_City"><span>Bloons Monkey City</span></a></li><li id="n-Bloons-Blitz" class="mw-list-item"><a href="/Bloons_Blitz"><span>Bloons Blitz</span></a></li><li id="n-Bloons-Card-Storm" class="mw-list-item"><a href="/Bloons_Card_Storm"><span>Bloons Card Storm</span></a></li><li id="n-Bloons-Pop!" class="mw-list-item"><a href="/Bloons_Pop!"><span>Bloons Pop!</span></a></li><li id="n-Bloons-Supermonkey-2" class="mw-list-item"><a href="/Bloons_Supermonkey_2"><span>Bloons Supermonkey 2</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="n-Batch-upload" class="mw-list-item"><a href="/Special:BatchUpload"><span>Batch upload</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="/Blooncyclopedia:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/Blooncyclopedia:About">About Blooncyclopedia</a></li>
+	<li id="footer-places-disclaimers"><a href="/Blooncyclopedia:General_disclaimer">Disclaimers</a></li>
+	<li id="footer-places-mobileview"><a href="https://www.bloonswiki.com/index.php?title=Special:CargoQuery&amp;tables=btd6_towers&amp;fields=btd6_towers.name%2C+btd6_towers.category%2C+btd6_towers.cost%2C+btd6_towers.image%2C+&amp;where=&amp;join_on=&amp;group_by=&amp;having=&amp;order_by%5B0%5D=&amp;order_by_options%5B0%5D=ASC&amp;limit=&amp;offset=&amp;format=table&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="/resources/assets/licenses/cc-by-nc-sa.png" alt="Creative Commons Attribution-NonCommercial-ShareAlike" width="88" height="31" loading="lazy"></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="/resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+</footer>
+
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet vector-menu-portal portal" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":143});});</script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a266f8d33b0d58ee',t:'MTc4NTk0NTE3OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

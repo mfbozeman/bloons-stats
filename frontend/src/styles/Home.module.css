@@ -1,0 +1,51 @@
+section.hero {
+  text-align: left;
+  padding: 2em;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 2em;
+
+  overflow: hidden;
+}
+
+img.banner {
+  object-fit: cover;
+  width: 55%;
+  float: right;
+  border-radius: 16px;
+}
+
+section.second {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+section.second h2 {
+  text-align: center;
+  grid-column: 1 / span 3;
+}
+
+div.feature {
+  background-color: var(--layer-bg);
+  color: var(--layer-text);
+  padding: 1em;
+  margin: 1em;
+  border-radius: 2em;
+}
+
+@media (width <= 1200px) {
+  section.hero {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  section.hero a.cta {
+    max-width: fit-content;
+    align-self: center;
+  }
+  section.second {
+    display: flex;
+    flex-direction: column;
+  }
+  img.banner {
+    width: 100%;
+  }
+}

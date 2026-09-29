@@ -1,0 +1,50 @@
+div.upgrade-active,
+div.upgrade-inactive,
+div.upgrade-invalid {
+  cursor: pointer;
+  width: 72px;
+  height: 72px;
+  /* padding: 0.5em;
+  margin: 1em; */
+  border-radius: 15em;
+  text-align: center;
+  box-shadow: var(--shadow-small);
+  margin: 0 1em;
+  padding: 1em;
+}
+div.upgrade-active img,
+div.upgrade-inactive img,
+div.upgrade-invalid img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  /* margin: 1em; */
+}
+div.upgrade-active {
+  background-color: #9fbf2a;
+}
+div.upgrade-inactive {
+  background-color: var(--layer-bg);
+}
+div.upgrade-invalid {
+  background-color: var(--layer-text);
+  background-color: #736a56;
+}
+
+@media (width <= 1200px) {
+  div.upgrade-active,
+  div.upgrade-inactive,
+  div.upgrade-invalid {
+    width: 36px;
+    height: 36px;
+    padding: 0.5em;
+    margin: 0 0.5em;
+  }
+  div.upgrade-active img,
+  div.upgrade-inactive img,
+  div.upgrade-invalid img {
+    width: 36px;
+    height: 36px;
+    margin: 0;
+  }
+}

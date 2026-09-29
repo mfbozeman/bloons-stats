@@ -1,0 +1,130 @@
+div.display {
+  display: flex;
+  text-align: left;
+  margin-bottom: 1em;
+  min-height: 800px;
+}
+
+p.damage img {
+  width: 30px;
+  height: 40px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-left: 0.5em;
+}
+
+table {
+  margin-right: 36px;
+}
+table img {
+  width: 36px;
+  padding: 4px;
+}
+
+div.options {
+  margin: 0.5em;
+  padding: 0.5em;
+  width: 250px;
+}
+div.options > div {
+  padding: 0.5em;
+  border-radius: 1em;
+  margin: 0.5em 0;
+}
+div.options img {
+  display: inline-block;
+  width: 24px;
+  vertical-align: center;
+  filter: invert(100%);
+}
+div.options label {
+  padding: 0.5em 0;
+  margin: 0.5em 0;
+}
+div.selected,
+li.selected {
+  font-weight: bold;
+  border: 2px solid var(--text);
+  border-radius: 1em;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+div.options ul {
+  padding: 0.25em;
+  /* margin: 0; */
+  border-radius: 1em;
+  list-style: none;
+}
+div.options li {
+  border-radius: 2em;
+  margin: 0.5em;
+  padding: 0.5em;
+  cursor: pointer;
+}
+div.options h4 {
+  cursor: pointer;
+  margin: 0;
+}
+input[type="number"] {
+  appearance: none;
+  font-family: inherit;
+  font-size: 100%;
+  border-radius: 8px;
+  border: 2px solid var(--border);
+  background-color: var(--layer-bg);
+  margin: 4px;
+  padding: 4px;
+}
+select {
+  appearance: none;
+  background-color: var(--layer-bg);
+  padding: 0.5em;
+  margin: 0.5em;
+  border: var(--border);
+  border-radius: 0.5em;
+  font-size: 100%;
+  font-family: inherit;
+}
+
+div.upgrade-view {
+  margin: 1em;
+  padding: 1em;
+  display: flex;
+}
+div.all-upgrades {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 216px);
+}
+div.all-upgrades
+  div:has(div.upgrade-active, div.upgrade-inactive, div.upgrade-invalid)
+  h4 {
+  margin: 0;
+}
+
+h4 img {
+  filter: brightness(0) saturate(100%) invert(43%) sepia(0%) saturate(76%)
+    hue-rotate(142deg) brightness(89%) contrast(82%);
+  vertical-align: center;
+}
+
+@media (width <= 1200px) {
+  div.all-upgrades h3,
+  div.all-upgrades h4 {
+    display: none;
+  }
+  div.upgrade-view {
+    margin: 0;
+    padding: 0;
+  }
+  div.display {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+  }
+  div.all-upgrades {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 100px);
+  }
+}

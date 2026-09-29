@@ -1,0 +1,37 @@
+nav {
+  padding: 1em;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 1em;
+
+  opacity: 0.9;
+
+  position: sticky;
+  top: 0;
+
+  background-color: var(--bg);
+  z-index: 1;
+}
+
+nav a:first-child {
+  justify-self: left;
+  margin-right: auto;
+  font-family: var(--heading);
+}
+nav a {
+  justify-self: right;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2em;
+}
+
+@media (width <= 1200px) {
+  nav {
+    font-size: 0.75em;
+  }
+}
