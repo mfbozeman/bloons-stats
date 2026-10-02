@@ -1,0 +1,7 @@
+node_modules
+generated
+.env
+html-pages/btd6_towers_files
+html-pages/btd6_upgrades_files
+node_modules/
+dist/

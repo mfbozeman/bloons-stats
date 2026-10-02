@@ -1,0 +1,63 @@
+// use prisma-8
+
+model tower {
+  id       String      @id
+  name     String
+  category String
+  cost     Int
+  stats    statBlock[]
+  upgrades upgrade[]
+}
+
+model upgrade {
+  id          String @id
+  name        String
+  towerId     String
+  path        Int
+  tier        Int
+  cost        Int
+  tower       tower  @relation(fields: [towerId], references: [id])
+}
+
+model statBlock {
+  towerId   String
+  id        String   @id
+  path1     Int
+  path2     Int
+  path3     Int
+  land      Boolean
+  water     Boolean
+  range     Int
+  footprint Int
+  subtowers Json?
+  attacks   attack[]
+  tower     tower    @relation(fields: [towerId], references: [id])
+}
+
+model attack {
+  id          Int          @id @default(autoincrement())
+  statId      String
+  name        String
+  rate        Float
+  count       Int
+  attackRange Int
+  camo        Boolean
+  buffs       Json?
+  statsFor    statBlock    @relation(fields: [statId], references: [id])
+  projectiles projectile[]
+}
+
+model projectile {
+  id              Int     @id @default(autoincrement())
+  attackId        Int
+  name            String
+  pierce          Float
+  damage          Int
+  radius          Int
+  bloonImmunities Int
+  speed           Int
+  lifespan        Float
+  effects         Json?
+  modifiers       Json?
+  attack          attack  @relation(fields: [attackId], references: [id])
+}
