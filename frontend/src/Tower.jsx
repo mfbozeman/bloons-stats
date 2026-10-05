@@ -169,8 +169,8 @@ function Tower() {
   // curr.id has towerName and path
   // mov image logic, pass in upgrade name, and category
   // can any of this be grouped into an object?
-  const stats = info?.stats
-    ? info.stats.reduce((acc, curr) => {
+  const stats = info?.statBlocks
+    ? info.statBlocks.reduce((acc, curr) => {
         if (curr.id == desired_id) {
           attacks = curr.attacks;
           return (
