@@ -66,7 +66,7 @@ function Tower() {
   }
 
   useEffect(() => {
-    const url = "http://localhost:3000/tower/" + towerId;
+    const url = "https://btd6-stats.onrender.com/tower/" + towerId;
     fetch(url)
       .then((response) => {
         return response.json();

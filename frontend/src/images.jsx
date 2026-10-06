@@ -1,7 +1,6 @@
 // import images here and associate them with the proper tower / upgrade
 
-// optimization?
-
+// TODO: optimization?
 // why not put these declarations in the functions? does it matter?
 
 const towerImages = import.meta.glob("./assets/towers/*.png", {

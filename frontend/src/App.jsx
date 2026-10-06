@@ -1,5 +1,4 @@
 import { Link, Outlet } from "react-router";
-import styles from "./styles/App.module.css";
 import logo from "./assets/favicon.png";
 
 function App() {

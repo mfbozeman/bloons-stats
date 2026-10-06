@@ -9,7 +9,7 @@ function AllTowers() {
   const [towers, setTowers] = useState(null);
   // fetch all towers
   useEffect(() => {
-    fetch("http://localhost:3000/tower/")
+    fetch("https://btd6-stats.onrender.com/tower")
       .then((response) => response.json())
       .then((response) => {
         setTowers(response);
