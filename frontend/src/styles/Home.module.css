@@ -30,6 +30,9 @@ div.feature {
   margin: 1em;
   border-radius: 2em;
 }
+div.feature a {
+  color: var(--layer-text);
+}
 
 @media (width <= 1200px) {
   section.hero {

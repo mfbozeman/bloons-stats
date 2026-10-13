@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./styles/AllTowers.module.css";
 import { importTowers } from "./images";
+import LoadingPage from "./Loading";
 
 const urls = importTowers();
 
@@ -37,7 +38,7 @@ function AllTowers() {
   });
 
   return loading ? (
-    <>Loading...</>
+    <LoadingPage />
   ) : (
     <section className={styles["all-towers"]}>
       <h1>All Towers</h1>

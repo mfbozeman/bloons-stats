@@ -21,10 +21,17 @@ table img {
   padding: 4px;
 }
 
-div.options {
+div.more {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+div.options,
+div.attacks {
   margin: 0.5em;
   padding: 0.5em;
   width: 250px;
+  /* background-color: var(--layer-bg); */
 }
 div.options > div {
   padding: 0.5em;
@@ -37,35 +44,49 @@ div.options img {
   vertical-align: center;
   filter: invert(100%);
 }
+
+div.options ul {
+  list-style: none;
+}
+div.options li {
+  padding: 0.25em;
+  cursor: pointer;
+  border-radius: 4px;
+  padding-left: 10px;
+  /* border: 2px solid white; */
+}
+li p::before {
+  content: "";
+  background-image: url("../assets/chevron-right.svg");
+  background-size: 25px 20px;
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+}
+li:hover,
+li:focus {
+  background-color: var(--text);
+  color: var(--layer-text);
+}
+li.selected {
+  font-weight: bold;
+  background-color: var(--layer-bg);
+  color: var(--layer-text);
+}
+li.selected li.selected {
+  background-color: var(--selected);
+}
+div.options h4,
+div.options p {
+  cursor: pointer;
+  margin: 2px;
+  padding: 2px;
+}
 div.options label {
   padding: 0.5em 0;
   margin: 0.5em 0;
 }
-div.selected,
-li.selected {
-  font-weight: bold;
-  border: 2px solid var(--text);
-  border-radius: 1em;
-  margin: 0.5em;
-  padding: 0.5em;
-}
-div.options ul {
-  padding: 0.25em;
-  /* margin: 0; */
-  border-radius: 1em;
-  list-style: none;
-}
-div.options li {
-  border-radius: 2em;
-  margin: 0.5em;
-  padding: 0.5em;
-  cursor: pointer;
-}
-div.options h4 {
-  cursor: pointer;
-  margin: 0;
-}
-input[type="number"] {
+li input[type="number"] {
   appearance: none;
   font-family: inherit;
   font-size: 100%;

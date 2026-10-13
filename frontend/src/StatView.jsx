@@ -2,8 +2,15 @@ import Projectile from "./Projectile";
 import styles from "./styles/StatView.module.css";
 
 function StatView(props) {
-  // we use: proj, attack, cost, genInfo
-  // instead of info, pass in "portraitUrl", the name to be used, towerName, path, category
+  // we use: proj, attack, cost, "portraitUrl", towerName, path, category
+
+  // alternate views come up if :
+  // projectile only has effects: special proj view
+  // projectile has no damage or effects: shouldn't be included
+  // attack has no valid projectiles:
+  //    buff: special attack view
+  //    subtower: special subtower view
+  //    other: shouldn't be included
 
   const pathNums = props.block.id.slice(-3).split("").join("-");
   const name = props.block.id.slice(0, -3).replaceAll("_", " ").trim();
@@ -22,9 +29,6 @@ function StatView(props) {
   );
 
   // if an attack has no projectiles, it is either a buff or spawner
-  if (props.attack.projectiles?.length < 0 || !props.proj) {
-    return <></>;
-  }
 
   // call both attack and projectile here
   const currProj = (

@@ -27,8 +27,7 @@ div.upgrade-inactive {
   background-color: var(--layer-bg);
 }
 div.upgrade-invalid {
-  background-color: var(--layer-text);
-  background-color: #736a56;
+  background-color: var(--greyout);
 }
 
 @media (width <= 1200px) {

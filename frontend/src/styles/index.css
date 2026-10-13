@@ -3,33 +3,29 @@
 
 :root {
   --border: #e0e0e0;
-  --link: #0a5cae;
-  --accent: #ed9200;
   --accent-bg: #ecf5fe;
-  /* --layer-bg: #ebebeb; */
-  --layer-bg: #eae8e5;
+
   --shadow: 0 10px 15px -3px #3d3d3d, #1f1f1f 2px 4px 6px -2px;
   --shadow-small: 0 4px 8px -3px #3d3d3d, #1f1f1f 1px 2px 3px -1px;
 
   --text: #ffffff;
   --text-h: #ffffff;
-
   --link: #ffffff;
 
+  --bg: #036ed9;
   --layer-bg-a: #ffffff;
   --layer-text: #01163f;
   --accent: #f29f05;
-  /* --bg: #0583f2; */
   --layer-bg: #f6bc50;
+  --selected: #9fbf2a;
+  --greyout: #736a56;
   --error: #f23005;
-  --bg: #036ed9;
 
   --sans: "Rethink Sans", system-ui, sans-serif;
   --heading: "Luckiest Guy", system-ui, sans-serif;
 
   font: 18px var(--sans);
   /* letter-spacing: 0.33px; */
-  /* color-scheme: light dark; */
   color: var(--text);
   background: var(--bg);
   /* background: linear-gradient(

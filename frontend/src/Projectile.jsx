@@ -23,11 +23,26 @@ function Projectile(props) {
   const [showCoverage, setCoverage] = useState(false);
   // a projectile is not always damaging:
   // e.g. bomb shooter's explosion, or base glue gunner's proj
-  // TODO: exclude NON-damaging projectiles like explosions etc
-  if (props.proj.damage <= 0) {
+
+  let miscInfo = [];
+  const damageMods = props.proj.modifiers;
+  const modifierList = Object.keys(props.proj.modifiers);
+  const effects = props.proj.effects ? props.proj?.effects["_order"][""] : [];
+
+  // does it have effects?
+  // yes? effect display
+  // no? exclude it
+
+  if (props.proj.damage <= 0 && effects.length <= 0) {
     return (
       <div>
-        <h2>This projectile is currently unsupported.</h2>
+        <h2>This projectile does no damage.</h2>
+      </div>
+    );
+  } else if (props.proj.damage <= 0) {
+    return (
+      <div>
+        <h2>Effect-only proj.</h2>
       </div>
     );
   }
@@ -83,11 +98,6 @@ function Projectile(props) {
       </td>
     );
   });
-
-  let miscInfo = [];
-  const damageMods = props.proj.modifiers;
-  const modifierList = Object.keys(props.proj.modifiers);
-  const effects = props.proj.effects ? props.proj?.effects["_order"][""] : [];
 
   // TODO: we might want to save these numbers somewhere...
   // TODO: abilities and effects
@@ -161,13 +171,9 @@ function Projectile(props) {
         <div className={styles["stats"]}>
           <p className={styles["cost"]}>${props.cost}</p>
           <p className={styles["range"]}>
-            {/* Range:  */}
             {props.range < 1000 ? props.range : <>&#8734;</>} units
           </p>
-          <p className={styles["speed"]}>
-            {/* Cooldown:  */}
-            {props.rate.toFixed(2)}sec
-          </p>
+          <p className={styles["speed"]}>{props.rate.toFixed(2)}sec</p>
           <p className={styles["damage"]}>
             {props.proj.damage} damage
             <img src={images[damageUrl]} alt="" />

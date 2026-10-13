@@ -7,6 +7,7 @@ import { importTowers, importPortraits } from "./images";
 import chevronDown from "./assets/chevron-down.svg";
 import chevronUp from "./assets/chevron-up.svg";
 import styles from "./styles/Tower.module.css";
+import LoadingPage from "./Loading";
 
 // a component for a single Tower, containing data on all of its paths
 // e.g. a Dart Monkey
@@ -25,7 +26,7 @@ function Tower() {
   const [path, setPath] = useState([0, 0, 0]);
   const [info, setInfo] = useState(null);
   // loading and error.
-  const [loading, setLoading] = useState(false); // loaders?
+  const [loading, setLoading] = useState(true); // loaders?
   const [error, setError] = useState(false);
 
   // split these off?
@@ -72,13 +73,14 @@ function Tower() {
         return response.json();
       })
       .then((response) => {
-        // throw if response bad
-
         console.log(response);
         setInfo(response);
       })
-      .catch((err) => {
+      .catch(() => {
         setError({ status: "404", body: "Not Found" });
+      })
+      .finally(() => {
+        setLoading(false);
       });
 
     // url
@@ -164,10 +166,6 @@ function Tower() {
       : { name: "Base", cost: info?.cost, cumulCost: info?.cost };
 
   // TODO: clean this up.. rn StatView relies too much on Tower
-  // we use: proj, attack, cost, genInfo
-  // instead of info, pass in "portraitUrl", the name to be used, towerName, path, category
-  // curr.id has towerName and path
-  // mov image logic, pass in upgrade name, and category
   // can any of this be grouped into an object?
   const stats = info?.statBlocks
     ? info.statBlocks.reduce((acc, curr) => {
@@ -189,82 +187,61 @@ function Tower() {
         return acc;
       }, null)
     : null;
-  // if there's only one proj, don't bother
-  // what if only one attack? and it has 1/2+ projs
+
+  // exclude: projectiles with no damage or effects
+  // attacks with only those projectiles should not exist
   const attackView = attacks.map((a, i) => {
-    const damageProjs = a?.projectiles?.filter((p) => {
-      return p.damage > 0;
-    });
-    return damageProjs.length > 0 ? (
-      <>
-        <li>
-          {i === attackIndex ? (
-            <>
-              {damageProjs.length > 0 ? (
-                <>
-                  <div
-                    className={
-                      attackIndex === i
-                        ? styles["selected"]
-                        : styles["unselected"]
-                    }
-                    onClick={() => {
-                      setAttackIndex(i);
-                      setProjIndex(0);
-                    }}
-                  >
-                    {a.name}
-                  </div>
-                  <ul>
-                    {damageProjs.map((p, j) => {
-                      return (
-                        <li
-                          onClick={() => {
-                            setProjIndex(j);
-                          }}
-                          className={
-                            projIndex === j
-                              ? styles["selected"]
-                              : styles["unselected"]
-                          }
-                        >
-                          {p.name}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </>
-              ) : null}
-            </>
-          ) : (
-            <>
-              <div
+    const projView =
+      a.projectiles?.length > 1
+        ? a.projectiles?.map((p, j) => {
+            return (
+              <li
                 onClick={() => {
                   setAttackIndex(i);
-                  setProjIndex(0);
+                  setProjIndex(j);
                 }}
+                className={
+                  projIndex === j && attackIndex === i
+                    ? styles["selected"]
+                    : styles["unselected"]
+                }
               >
-                {a.name}
-                <img src={chevronDown} alt="" />
-              </div>
-            </>
-          )}
-        </li>
-      </>
-    ) : null;
+                {p.name}, {j}
+              </li>
+            );
+          })
+        : null;
+    return (
+      <li
+        className={
+          attackIndex === i ? styles["selected"] : styles["unselected"]
+        }
+      >
+        <p
+          onClick={() => {
+            setAttackIndex(i);
+            setProjIndex(0);
+          }}
+        >
+          {a.name}, {i}
+        </p>
+        <ul>{projView}</ul>
+      </li>
+    );
   });
 
-  return (
+  return loading ? (
+    <LoadingPage />
+  ) : (
     <>
       <div className={styles["display"]}>
         <div className={styles["stat-card"]}>{stats}</div>
-
         <div className={styles["upgrade-view"]}>
           <div className={styles["all-upgrades"]}>{upgradeChart}</div>
         </div>
       </div>
-      <div className={styles["options"]}>
-        <div>
+      <div className={styles["more"]}>
+        <div className={styles["options"]}>
           <h4
             onClick={() => {
               if (menu === "attacks") {
@@ -274,12 +251,12 @@ function Tower() {
               }
             }}
           >
-            Attacks
+            Switch Attack
             <img src={menu === "attacks" ? chevronUp : chevronDown} alt="" />
           </h4>
           {menu === "attacks" ? <ul>{attackView}</ul> : null}
         </div>
-        <div>
+        <div className={styles["options"]}>
           <h4
             onClick={() => {
               if (menu === "options") {
@@ -316,6 +293,9 @@ function Tower() {
             </div>
           ) : null}
         </div>
+      </div>
+      <div>
+        <h2>FAQ and tips?</h2>
       </div>
     </>
   );
@@ -360,31 +340,5 @@ function Tower() {
       onChange={(e) => updatePath(e.target.value, 0)}
     />
   </form> */
-
-{
-  /* <div className={styles["clear-upgrades"]}>
-          <img
-            src={close}
-            alt="Clear Path"
-            onClick={() => {
-              clearPath(0);
-            }}
-          />
-          <img
-            src={close}
-            alt="Clear Path"
-            onClick={() => {
-              clearPath(1);
-            }}
-          />
-          <img
-            src={close}
-            alt="Clear Path"
-            onClick={() => {
-              clearPath(2);
-            }}
-          />
-        </div> */
-}
 
 export default Tower;
