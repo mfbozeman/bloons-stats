@@ -29,3 +29,11 @@ export const readAllTowers = async () => {
   const allTowers = await db.select().from(tower);
   return allTowers;
 };
+
+export const readStatBlockById = async () => {
+  const selectBlock = await db.query.statBlock.findFirst({
+    where: { id },
+    with: { attacks: { with: { projectiles: true } } },
+  });
+  return selectBlock;
+};

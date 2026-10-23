@@ -21,15 +21,16 @@ returns an object of all towers.
 GET https://btd6-stats.onrender.com/tower/{id}
 returns the full info for the given tower
 
-# Upcoming Goals
+GET https://btd6-stats.onrender.com/stats/{id}
+return full info for stat block
 
-on statBlock: abilities, buffs, subtowers
+## TODO List
 
-on attack:
-effects: slow, DoT, etc.
-no projectiles means:
-either buffs or spawner attack - should correspond to a subtower
-
-conditional modifiers:
-crits, bloons/towers in range, more?
-(burstCount, burstInterval) for Desperado
+- count needs to be on projectile
+- on statBlock: abilities, buffs, subtowers
+- on attack:
+  - effects: slow, DoT, etc.
+  - no projectiles means: either buffs or spawner attack, should correspond to a subtower
+  - conditional modifiers:
+  - crits, bloons/towers in range, more?
+  - (burstCount, burstInterval) for Desperado

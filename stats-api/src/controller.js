@@ -27,7 +27,7 @@ export const getAllTowers = async (req, res) => {
 export const getStatBlock = async (req, res) => {
   const { statId } = req.params;
 
-  const statBlock = {};
+  const statBlock = await query.readStatBlockById(statId);
 
   res.send(statBlock);
 };
