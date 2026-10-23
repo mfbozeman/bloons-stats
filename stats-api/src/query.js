@@ -30,7 +30,7 @@ export const readAllTowers = async () => {
   return allTowers;
 };
 
-export const readStatBlockById = async () => {
+export const readStatBlockById = async (id) => {
   const selectBlock = await db.query.statBlock.findFirst({
     where: { id },
     with: { attacks: { with: { projectiles: true } } },
