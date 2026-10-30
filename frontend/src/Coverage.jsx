@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { importBloons } from "./images";
+import { importBloons } from "./utils";
 import noBloon from "./assets/No_bloon.svg";
 import yesBloon from "./assets/Yes_bloon.svg";
 

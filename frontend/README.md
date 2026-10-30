@@ -12,16 +12,16 @@ Uses the unofficial BTD6 Stats API to get data, which in turn gets its numbers
 from the Blooncyclopedia wiki. Information on the API can be found at
 ../stats-api.
 
-Features include...
+#### Disclaimer
 
-copyright disclaimer
 Bloons Tower Defense 6 and all related names and images belong to Ninja Kiwi.
 
 ## TODO List
 
-- error boundary
-- Hero needs stat cards carousel
+- compute stats with attack \* projectile count
+- new title font?
 
+- error ui
 - Loading pages throughout - include a game of some sort
   - ideas: memory ? dino style game ?
 - include damage mods in DPS

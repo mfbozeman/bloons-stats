@@ -21,13 +21,13 @@ div.projectile {
   text-align: left;
 }
 
-p.damage img {
+div.damage img {
   width: 20px;
   height: 25px;
   margin-left: 5px;
 }
 
-p.damage::before {
+div.damage::before {
   background-image: url("../assets/BTD6_MapBuffIconDamage.png");
   background-size: 25px 20px;
   display: inline-block;

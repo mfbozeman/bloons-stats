@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./styles/AllTowers.module.css";
-import { importTowers } from "./images";
+import { importTowers } from "./utils";
 import LoadingPage from "./Loading";
 
 const urls = importTowers();

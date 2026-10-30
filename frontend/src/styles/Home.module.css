@@ -1,9 +1,8 @@
 section.hero {
   text-align: left;
-  padding: 2em;
+  padding: 0 2em;
   border-bottom: 2px solid var(--border);
   margin-bottom: 2em;
-
   overflow: hidden;
 }
 
@@ -12,6 +11,10 @@ img.banner {
   width: 55%;
   float: right;
   border-radius: 16px;
+}
+img.logo {
+  vertical-align: middle;
+  width: 7%;
 }
 
 section.second {

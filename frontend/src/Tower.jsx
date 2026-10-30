@@ -3,7 +3,6 @@ import StatView from "./StatView";
 import { useEffect, useState } from "react";
 import { useParams, data } from "react-router";
 
-import { importTowers, importPortraits } from "./images";
 import chevronDown from "./assets/chevron-down.svg";
 import chevronUp from "./assets/chevron-up.svg";
 import styles from "./styles/Tower.module.css";
@@ -12,20 +11,14 @@ import LoadingPage from "./Loading";
 // a component for a single Tower, containing data on all of its paths
 // e.g. a Dart Monkey
 
-// portrait-style stat cards
-// TODO: loading page
-
-const portraits = importTowers();
-const upgradePortraits = importPortraits();
-
 function Tower() {
   // this is an object of each path's data
   const { towerId } = useParams();
 
-  // states ?
+  // path and info ?
   const [path, setPath] = useState([0, 0, 0]);
   const [info, setInfo] = useState(null);
-  // loading and error.
+  // loading and error
   const [loading, setLoading] = useState(true); // loaders?
   const [error, setError] = useState(false);
 
@@ -33,33 +26,8 @@ function Tower() {
   const [costMult, setCostMult] = useState(1);
   const [menu, setMenu] = useState("closed");
 
-  // ...?
-  const [attackIndex, setAttackIndex] = useState(0);
-  const [projIndex, setProjIndex] = useState(0);
-
   const tier = Math.max(...path);
   const mainPath = path.indexOf(tier); //0-indexed, so +1 when displaying
-
-  const portraitUrl =
-    tier === 0
-      ? portraits[
-          "./assets/towers/180px-BTD6_000-" +
-            towerId.replace("_", "") +
-            "_zZLs.png"
-        ]
-      : upgradePortraits[
-          "./assets/portraits/180px-BTD6_" +
-            path.reduce((accum, curr, index) => {
-              return index === mainPath ? accum + curr : accum + "0";
-            }, "") +
-            "-" +
-            towerId.replace("_", "") +
-            "_X5-a.png"
-        ];
-
-  // easy mult = 0.85
-  // hard mult = 1.08
-  // impoppable = 1.2
 
   function getCost(num) {
     // round to nearest 5
@@ -102,7 +70,6 @@ function Tower() {
 
   const category = info ? info.category : null;
   const desired_id = towerId + "_" + path.join("");
-  let attacks = [];
 
   const upgradeList = info?.upgrades
     ? info.upgrades
@@ -145,8 +112,6 @@ function Tower() {
   });
 
   function clickUpgrade(p, t) {
-    setAttackIndex(0);
-    setProjIndex(0);
     if (path[p - 1] === t) {
       updatePath(0, p - 1);
     } else if (mainPath !== p - 1) {
@@ -165,70 +130,24 @@ function Tower() {
       ? upgradeList[5 * mainPath + tier - 1]
       : { name: "Base", cost: info?.cost, cumulCost: info?.cost };
 
-  // TODO: clean this up.. rn StatView relies too much on Tower
   // can any of this be grouped into an object?
   const stats = info?.statBlocks
     ? info.statBlocks.reduce((acc, curr) => {
         if (curr.id == desired_id) {
-          attacks = curr.attacks;
           return (
             <StatView
-              block={curr}
+              id={curr.id}
               key={curr.id}
-              attack={curr.attacks[attackIndex]}
-              proj={curr.attacks[attackIndex]?.projectiles[projIndex]}
               cost={cumulCost}
               title={tier === 0 ? info?.name : currUpgrade?.name}
               category={category}
-              portrait={portraitUrl}
+              upgrades={info?.upgrades}
             />
           );
         }
         return acc;
       }, null)
     : null;
-
-  // exclude: projectiles with no damage or effects
-  // attacks with only those projectiles should not exist
-  const attackView = attacks.map((a, i) => {
-    const projView =
-      a.projectiles?.length > 1
-        ? a.projectiles?.map((p, j) => {
-            return (
-              <li
-                onClick={() => {
-                  setAttackIndex(i);
-                  setProjIndex(j);
-                }}
-                className={
-                  projIndex === j && attackIndex === i
-                    ? styles["selected"]
-                    : styles["unselected"]
-                }
-              >
-                {p.name}, {j}
-              </li>
-            );
-          })
-        : null;
-    return (
-      <li
-        className={
-          attackIndex === i ? styles["selected"] : styles["unselected"]
-        }
-      >
-        <p
-          onClick={() => {
-            setAttackIndex(i);
-            setProjIndex(0);
-          }}
-        >
-          {a.name}, {i}
-        </p>
-        <ul>{projView}</ul>
-      </li>
-    );
-  });
 
   return loading ? (
     <LoadingPage />
@@ -241,21 +160,6 @@ function Tower() {
         </div>
       </div>
       <div className={styles["more"]}>
-        <div className={styles["options"]}>
-          <h4
-            onClick={() => {
-              if (menu === "attacks") {
-                setMenu("closed");
-              } else {
-                setMenu("attacks");
-              }
-            }}
-          >
-            Switch Attack
-            <img src={menu === "attacks" ? chevronUp : chevronDown} alt="" />
-          </h4>
-          {menu === "attacks" ? <ul>{attackView}</ul> : null}
-        </div>
         <div className={styles["options"]}>
           <h4
             onClick={() => {
@@ -294,51 +198,29 @@ function Tower() {
           ) : null}
         </div>
       </div>
-      <div>
-        <h2>FAQ and tips?</h2>
-      </div>
     </>
   );
 }
 
 // options menu
-//              (<p>View toggler - portrait v landscape</p>
-//               <p>Attack Speed vs Attack cooldown toggle</p>
-//               <p>
-//                 include common buffs:
-//                 <label htmlFor="">Jungle Drums</label>
-//                 <input type="checkbox" name="" id="" />
-//                 {/* 85% cooldown */}
-//                 <label htmlFor="">Berserker Brew</label>
-//                 <input type="checkbox" name="" id="" />
-//                 {/* 110% range, 90% cooldown, +1 damage, +2 pierce */}
-//                 <label htmlFor="">Stronger Stim</label>
-//                 <input type="checkbox" name="" id="" />
-//                 {/* 115% range, 85% cooldown, +1 damage, +3 pierce, mutually Ex with brew */}
-//               </p>
-//               <p>DPS Calculation:</p>
-//               <p>Show DPS checkbox</p>
-//               <p>Calculate DPS by Max damage/Ceramic/MOAB</p>
-//               {/* max is theoretical max, ceramic is capped at 128, moab is moab only */}
-//               <p>Normalize by range ?</p>)
-
-// option to form
-/* <form>
-    <input
-      type="number"
-      name="path1"
-      id="path1"
-      value={path[0]}
-      min={0}
-      max={
-        Math.max(path[1], path[2]) <= 2
-          ? 5
-          : Math.min(path[1], path[2]) > 0
-            ? 0
-            : 2
-      }
-      onChange={(e) => updatePath(e.target.value, 0)}
-    />
-  </form> */
+// (<p>View toggler - portrait v landscape</p>
+// <p>Attack Speed vs Attack cooldown toggle</p>
+// <p>
+//   include common buffs:
+//   <label htmlFor="">Jungle Drums</label>
+//   <input type="checkbox" name="" id="" />
+//   {/* 85% cooldown */}
+//   <label htmlFor="">Berserker Brew</label>
+//   <input type="checkbox" name="" id="" />
+//   {/* 110% range, 90% cooldown, +1 damage, +2 pierce */}
+//   <label htmlFor="">Stronger Stim</label>
+//   <input type="checkbox" name="" id="" />
+//   {/* 115% range, 85% cooldown, +1 damage, +3 pierce, mutually Ex with brew */}
+// </p>
+// <p>DPS Calculation:</p>
+// <p>Show DPS checkbox</p>
+// <p>Calculate DPS by Max damage/Ceramic/MOAB</p>
+// {/* max is theoretical max, ceramic is capped at 128, moab is moab only */}
+// <p>Normalize by range ?</p>)
 
 export default Tower;

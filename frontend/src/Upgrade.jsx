@@ -1,7 +1,7 @@
 // displays as a box with the upgrade image (name and cost?)
 // when clicked should bring up the statview OR set crosspath
 
-import { importUpgrades } from "./images";
+import { importUpgrades } from "./utils";
 import styles from "./styles/Upgrade.module.css";
 
 // TODO: upgrade image naming is inconsistent :|

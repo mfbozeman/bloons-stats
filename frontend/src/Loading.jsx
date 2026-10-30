@@ -4,7 +4,6 @@ function LoadingPage() {
   return (
     <>
       <span className={styles["loader"]}></span>
-      <p>This can take a while.</p>
     </>
   );
 }

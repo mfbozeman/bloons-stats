@@ -3,7 +3,7 @@ import noBloon from "./assets/No_bloon.svg";
 import yesBloon from "./assets/Yes_bloon.svg";
 import chevronDown from "./assets/chevron-down.svg";
 import chevronUp from "./assets/chevron-up.svg";
-import { importBloons } from "./images";
+import { importBloons } from "./utils";
 
 import styles from "./styles/Projectile.module.css";
 
@@ -174,11 +174,11 @@ function Projectile(props) {
             {props.range < 1000 ? props.range : <>&#8734;</>} units
           </p>
           <p className={styles["speed"]}>{props.rate.toFixed(2)}sec</p>
-          <p className={styles["damage"]}>
+          <div className={styles["damage"]}>
             {props.proj.damage} damage
             <img src={images[damageUrl]} alt="" />
             <ul>{modifierList.length > 0 ? <>{miscInfo}</> : null}</ul>
-          </p>
+          </div>
           <p className={styles["pierce"]}>{props.proj.pierce} pierce</p>
         </div>
         <div className={styles["dps"]}>

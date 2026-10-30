@@ -1,0 +1,61 @@
+div.outerframe {
+  margin: 1.5em;
+  width: 50%;
+  float: right;
+  overflow-x: hidden;
+  /* scroll-behavior: smooth; */
+}
+
+div.carousel {
+  display: flex;
+  flex-direction: row;
+  transform: scale(0.65);
+
+  /* align-items: center; */
+}
+div.carousel a {
+  box-sizing: border-box;
+  max-width: 200px;
+  max-height: 300px;
+  padding: 16px;
+
+  z-index: 2;
+}
+div.carousel img {
+  object-fit: contain;
+}
+div.carousel > div {
+  height: fit-content;
+  width: fit-content;
+  border-radius: 36px;
+}
+div.carousel > div > div {
+  margin: 0;
+}
+div.carousel > div.inactive {
+  /* mask: linear-gradient(270deg, black, transparent); */
+  box-shadow: var(--shadow-small);
+  opacity: 0.8;
+  z-index: -1;
+}
+div.carousel > div.active {
+  transform: scale(1.5);
+  box-shadow: var(--shadow-big);
+  z-index: 2;
+}
+
+button img {
+  width: 20px;
+  height: 20px;
+}
+button.arrow {
+  float: right;
+  position: relative;
+  top: 250px;
+}
+button.arrow:nth-child(2) {
+  left: 650px;
+}
+button.arrow:nth-child(3) {
+  left: 125px;
+}

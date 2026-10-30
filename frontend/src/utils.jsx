@@ -1,7 +1,27 @@
 // import images here and associate them with the proper tower / upgrade
 
-// TODO: optimization?
-// why not put these declarations in the functions? does it matter?
+// TODO: optimize?
+
+function getCost(num, costMult) {
+  // round to nearest 5
+  return Math.round((num * costMult - 0.01) / 5) * 5;
+}
+
+// parameters: path as an array
+// upgrades:
+// tower base cost
+// difficult mult
+const getCumulCost = (path, upgrades, baseCost, mult = 1) => {
+  let sum = baseCost;
+  // have to sort upgrades....
+
+  for (let i = 1; i < 4; i++) {
+    for (let j = 1; j < path[i - 1]; j++) {
+      sum += getCost(upgrades[i][j].cost, mult);
+    }
+  }
+  return sum;
+};
 
 const towerImages = import.meta.glob("./assets/towers/*.png", {
   query: "?url",
@@ -44,7 +64,7 @@ function importBloons() {
   return importImages(bloonImages);
 }
 
-//dynamic import instead?
+// dynamic import instead?
 function importUpgrades() {
   return importImages(upgradeImages);
 }
@@ -55,4 +75,10 @@ function importTowers() {
 
 // associate / separate into tower / bloon / upgrade ?
 
-export { importTowers, importBloons, importUpgrades, importPortraits };
+export {
+  importTowers,
+  importBloons,
+  importUpgrades,
+  importPortraits,
+  getCumulCost,
+};

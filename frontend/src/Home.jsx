@@ -1,15 +1,18 @@
 import { Link } from "react-router";
+import Carousel from "./Carousel.jsx";
+
 import styles from "./styles/Home.module.css";
-import banner from "./assets/BTD6_share_banner_challenge.jpg";
 import logo from "./assets/favicon.png";
+import banner from "./assets/BTD6_share_banner_challenge.jpg";
 
 function Home() {
   return (
     <>
       <section className={styles.hero}>
-        {/* <img className={styles.banner} src={banner} alt="" /> */}
+        <Carousel />
         <h1>Stats for Bloons TD6</h1>
         <h2>
+          <img src={logo} alt="" className={styles.logo} />
           Welcome! A hub for you to plan strategies, check data, and compare
           towers.
         </h2>
@@ -31,12 +34,6 @@ function Home() {
         <div className={styles.feature}>
           coming soon: Tower Rankings
           <ul>
-            {/* Dev note: We are actually ranking stat blocks here --- or are they
-              even attacks, projectiles
-            
-              Rank stat blocks with proper pagination, since there's a lot of
-              them - we'll have to get into their indivdual attacks and projs
-              too */}
             <li>Rank towers by pierce, damage, DPS, etc.</li>
             <li>Directly compare multiple towers</li>
             <li>

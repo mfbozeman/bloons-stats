@@ -10,13 +10,6 @@ div.stat-card {
   gap: 1em;
 
   display: grid;
-  /* grid-template-columns: 250px 250px 300px;
-  grid-template-rows: 100px 100px 75px 125px;
-  grid-template-areas:
-    "a d d"
-    "a d d"
-    "a d d"
-    "land . ."; */
   grid-template-columns: 250px 400px;
   grid-template-rows: 100px 100px 75px 125px;
   grid-template-areas:
@@ -29,6 +22,7 @@ div.stat-card p {
   margin: 0.5em;
 }
 div.stat-card {
+  min-width: 250px;
   width: 350px;
   height: fit-content;
   min-height: 600px;
@@ -36,7 +30,7 @@ div.stat-card {
   display: flex;
   flex-direction: column;
 
-  margin: 2em 1em;
+  margin: 2em 1em 0;
   padding: 1em;
   text-align: center;
   /* justify-content: center; */
@@ -82,6 +76,33 @@ div.coverage h4 {
 }
 div.coverage h4 img {
   width: 1em;
+}
+
+div.bar {
+  display: flex;
+  flex-direction: row;
+  margin-top: -8px;
+  /* margin-left: 100px; */
+  width: 200px;
+
+  border-radius: 8px;
+}
+div.bar div {
+  font-size: 135%;
+  padding: 0.5em;
+
+  cursor: pointer;
+
+  background-color: var(--layer-bg);
+  color: var(--layer-text);
+
+  border-radius: 8px;
+}
+div.bar div.active {
+  font-size: 145%;
+  font-weight: bold;
+  border: 2px solid var(--layer-text);
+  box-shadow: var(--shadow);
 }
 
 @media (width <= 1200px) {
