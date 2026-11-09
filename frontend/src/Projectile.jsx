@@ -99,7 +99,7 @@ function Projectile(props) {
     );
   });
 
-  // TODO: we might want to save these numbers somewhere...
+  // TODO: we might want to save these damage numbers somewhere...
   // TODO: abilities and effects
 
   // const bonusDamage = [0,0,0,0]; // lead, ceramic, moab, fort
@@ -175,7 +175,7 @@ function Projectile(props) {
           </p>
           <p className={styles["speed"]}>{props.rate.toFixed(2)}sec</p>
           <div className={styles["damage"]}>
-            {props.proj.damage} damage
+            {props.proj.damage} damage x {props.proj.count} projectiles
             <img src={images[damageUrl]} alt="" />
             <ul>{modifierList.length > 0 ? <>{miscInfo}</> : null}</ul>
           </div>

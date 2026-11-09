@@ -63,19 +63,6 @@ li p::before {
   width: 25px;
   height: 20px;
 }
-li:hover,
-li:focus {
-  background-color: var(--text);
-  color: var(--layer-text);
-}
-li.selected {
-  font-weight: bold;
-  background-color: var(--layer-bg);
-  color: var(--layer-text);
-}
-li.selected li.selected {
-  background-color: var(--selected);
-}
 div.options h4,
 div.options p {
   cursor: pointer;

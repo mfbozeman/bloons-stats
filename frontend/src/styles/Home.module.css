@@ -6,6 +6,11 @@ section.hero {
   overflow: hidden;
 }
 
+section.hero > h2 {
+  line-height: 60px;
+  width: 40%;
+}
+
 img.banner {
   object-fit: cover;
   width: 55%;
@@ -14,7 +19,8 @@ img.banner {
 }
 img.logo {
   vertical-align: middle;
-  width: 7%;
+  width: 60px;
+  margin: 4px;
 }
 
 section.second {
@@ -23,6 +29,7 @@ section.second {
 }
 section.second h2 {
   text-align: center;
+  font-size: 200%;
   grid-column: 1 / span 3;
 }
 

@@ -18,8 +18,8 @@ Bloons Tower Defense 6 and all related names and images belong to Ninja Kiwi.
 
 ## TODO List
 
+- on statBlock: abilities, buffs, subtowers
 - compute stats with attack \* projectile count
-- new title font?
 
 - error ui
 - Loading pages throughout - include a game of some sort

@@ -13,18 +13,20 @@ function Home() {
         <h1>Stats for Bloons TD6</h1>
         <h2>
           <img src={logo} alt="" className={styles.logo} />
-          Welcome! A hub for you to plan strategies, check data, and compare
-          towers.
+          Welcome! This is a hub for BTD6 players to plan strategies, check
+          data, and compare towers.
         </h2>
         <Link to="/tower" className="cta">
-          See All Towers
+          See all towers
         </Link>
       </section>
 
       <section className={styles.second} id="features">
         <h2>Features</h2>
         <div className={styles.feature}>
-          <Link to="/tower">Browse Towers</Link>
+          <Link to="/tower">
+            <h3>Browse Towers</h3>
+          </Link>
           <ul>
             <li>See stats for every tower</li>
             <li>Toggle upgrades</li>
@@ -32,7 +34,7 @@ function Home() {
           </ul>
         </div>
         <div className={styles.feature}>
-          coming soon: Tower Rankings
+          <h3>coming soon: Tower Rankings</h3>
           <ul>
             <li>Rank towers by pierce, damage, DPS, etc.</li>
             <li>Directly compare multiple towers</li>
@@ -42,7 +44,7 @@ function Home() {
           </ul>
         </div>
         <div className={styles.feature}>
-          coming soon: Type Coverage Chart
+          <h3>coming soon: Type Coverage Chart</h3>
           <ul>
             <li>Check your defense for weaknesses</li>
             <li>

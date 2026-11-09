@@ -45,6 +45,7 @@ export const projectile = pgTable(
       .notNull()
       .references(() => attack.id),
     bloonImmunities: integer().notNull(),
+    count: integer().notNull(),
     damage: integer().notNull(),
     effects: json(),
     id: serial().primaryKey(),
@@ -66,6 +67,8 @@ export const projectile = pgTable(
 export const statBlock = pgTable(
   "statBlock",
   {
+    abilities: json(),
+    buffs: json(),
     footprint: integer().notNull(),
     id: text().primaryKey(),
     land: boolean().notNull(),

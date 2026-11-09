@@ -26,6 +26,7 @@ function StatView(props) {
     fetch(url)
       .then((response) => response.json())
       .then((response) => {
+        console.log(response);
         setStats(response);
       })
       .finally(() => {
@@ -37,8 +38,9 @@ function StatView(props) {
   // projectile only has effects: special proj view
   // projectile has no damage or effects: shouldn't be included
   // attack has no valid projectiles:
-  //    buff: special attack view
+  //    buff: special projectile view
   //    subtower: special subtower view
+
   //    other: shouldn't be included
   if (!stats || loading) {
     return (
@@ -111,7 +113,6 @@ function StatView(props) {
   }, []);
 
   const projectileMenu = allProjectiles.map((p, i) => {
-    console.log(p);
     return (
       <>
         <div
@@ -138,6 +139,38 @@ function StatView(props) {
     />
   );
 
+  let buffArr = [];
+  if (stats.buffs) {
+    // for each buff listed that is not _order s.t. {"buff Name": {properties}}
+
+    for (let buff in Object.keys(stats.buffs)) {
+      if (buff !== "_order") {
+        // if "appliesToOwningTower" is false: skip it for now
+        if (stats.buffs[buff]["appliesToOwningTower"] === "false") {
+          continue;
+        }
+        // else:
+        // check each property key
+        for (let property in Object.keys(stats.buffs[buff])) {
+          // {damage, rate, range, pierce, abilityCooldown} x {multiplier, percentage, additive}
+          // regex: /(damage|rate|range|pierce)(Multiplier|Percentage|Additive)/
+          let matches = property.match(
+            /(damage|rate|range|pierce)(Multiplier|Percentage|Additive)/,
+          );
+          // matches = [whole match, stat, behavior, ...]
+          let buffInfo = matches
+            ? [matches[1], matches[2], stats.buffs[buff][property], buff]
+            : null;
+          buffArr.push({ buff: buffInfo });
+          // pay attention to maxStackSize, lifespan
+        }
+      }
+    }
+    // pass this array into projectile view for calculations
+  }
+
+  // abilities, subtowers?
+
   // attack, proj, land, info
   return (
     <>
@@ -148,6 +181,12 @@ function StatView(props) {
             <h2>{title}</h2>
             <p>
               {path.join("-") + " " + name}, {props.category}
+            </p>
+            <p>
+              TODO:
+              {stats.buffs ? buffArr : null}
+              {stats.abilities ? "abilities" : null}
+              {stats.subtowers ? "subtowers!" : null}
             </p>
           </div>
           {/* {getCost()} */}

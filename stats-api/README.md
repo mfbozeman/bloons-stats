@@ -26,10 +26,8 @@ return full info for stat block
 
 ## TODO List
 
-- count needs to be on projectile
-- on statBlock: abilities, buffs, subtowers
 - on attack:
-  - effects: slow, DoT, etc.
+  - effects: slow, DoT, etc.?
   - no projectiles means: either buffs or spawner attack, should correspond to a subtower
   - conditional modifiers:
   - crits, bloons/towers in range, more?

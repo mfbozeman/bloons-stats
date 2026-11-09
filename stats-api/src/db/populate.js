@@ -95,6 +95,9 @@ async function createStatBlocks(towerId) {
 
     if (!existingPaths.includes(pathId)) {
       await db.insert(statBlock).values({
+        abilities: stats["abilities"],
+        buffs: stats["buffs"],
+        subtowers: stats["subtowers"],
         towerId: towerId,
         id: towerId + pathId,
         path1: Number(pathId[1]),
@@ -130,6 +133,9 @@ async function createStatBlocks(towerId) {
           let newStats = structuredClone(overrideStats);
           let crosspathStats = replaceAttrs(clone, newStats);
           await db.insert(statBlock).values({
+            abilities: stats["abilities"],
+            buffs: stats["buffs"],
+            subtowers: stats["subtowers"],
             towerId,
             id: towerId + crosspathId,
             path1: Number(crosspathId[1]),
@@ -216,7 +222,7 @@ async function createAttacks(attacks, statId) {
         buffs: obj.buffs,
       })
       .returning({ insertedId: attack.id });
-    // TODO: how to store misc modifiers, effects of the attack?
+    // TODO: how to store misc modifiers and effects of the attack?
     await createProjectiles(obj.projectiles, attackId[0].insertedId);
   }
 }
@@ -250,6 +256,7 @@ async function createProjectiles(projectiles, attackId) {
     }
     await db.insert(projectile).values({
       name: proj,
+      count: Number(obj.count) || 0,
       pierce: Number(obj.pierce) || 0,
       damage: parseInt(obj.damage) || 0,
       radius: parseInt(obj.radius) || 0,
